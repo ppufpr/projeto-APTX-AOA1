@@ -26,7 +26,6 @@ sn <- colnames(counts)
 genotype    <- factor(ifelse(grepl("KO|APTX|knock", sn, ignore.case = TRUE), "KO", "WT"),
                       levels = LEVELS_GENOTYPE)
 # Estímulo: distinguir "ImmStim" (estimulado = IS) de "NoStim" (não estimulado = NS).
-# CUIDADO: ambos os rótulos contêm "stim"; classificar primeiro o que é NS.
 stimulation <- factor(ifelse(grepl("NoStim|unstim|NS\\b|_NS", sn, ignore.case = TRUE), "NS",
                       ifelse(grepl("ImmStim|stim|LPS|poly|IS\\b|_IS", sn, ignore.case = TRUE), "IS", "NS")),
                       levels = LEVELS_STIMULATION)
