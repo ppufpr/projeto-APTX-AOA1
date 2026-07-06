@@ -197,7 +197,7 @@
 }
 \newline
 \\
-Pedro Henrique Ramos Prado\textsuperscript{1*}
+Pedro Henrique Ramos Prado, MSc.\textsuperscript{1*}
 \\
 \bigskip
 \textbf{1} Programa de Pós-Graduação em Informática (PPGInf), Universidade Federal do Paraná (UFPR), Curitiba, Paraná, Brasil
@@ -242,18 +242,17 @@ programa imune inato.
 A aprataxina é uma enzima que conserta um tipo específico de dano no DNA; quando
 ela falta, surge uma doença neurológica hereditária chamada AOA1. Não se sabe
 bem por que a ausência dessa enzima de reparo afeta o cérebro. Reanalisamos dados
-públicos de expressão gênica de células de microglia humana --- as células de
-defesa do sistema nervoso --- com e sem a aprataxina. Surpreendentemente, os
+públicos de expressão gênica de células de microglia humana, as células de
+defesa do sistema nervoso, com e sem a aprataxina. Surpreendentemente, os
 genes clássicos de reparo de DNA quase não mudam de atividade; o que muda é um
 grande conjunto de genes de defesa antiviral (a resposta de interferon), que fica
-\emph{desligado} nas células sem aprataxina. Para chegar a essa conclusão,
-aplicamos métodos de Biologia de Sistemas: transformamos a expressão dos genes em
+\emph{desligado} nas células sem aprataxina. Para chegar a essa conclusão, transformamos a expressão dos genes em
 estados discretos (ligado/desligado), construímos redes que ligam genes que
 variam juntos e comparamos duas maneiras de inferir essas redes, medindo o acerto
 contra uma base de referência de interações conhecidas. Mostramos que, com poucas
 amostras, um critério simples (correlação) supera um mais sofisticado
 (informação mútua). Nosso trabalho reforça a ideia de que a aprataxina, além de
-reparar o DNA, ajuda a regular a resposta imune inata --- uma ponte inesperada
+reparar o DNA, ajuda a regular a resposta imune inata, uma ponte inesperada
 entre reparo de DNA e imunidade que pode ajudar a entender a AOA1.
 
 \linenumbers
@@ -285,8 +284,8 @@ até a validação das redes inferidas.
 \centering
 \includegraphics[width=0.92\textwidth]{figure_fluxograma.png}
 \caption{Fluxograma do \emph{pipeline} analítico. Os blocos em tom avermelhado
-destacam os métodos de Biologia de Sistemas (discretização, modelagem booleana e
-inferência de rede); o bloco verde indica a etapa de validação por métricas
+destacam os métodos de: discretização, modelagem booleana e
+inferência de rede; o bloco verde indica a etapa de validação por métricas
 contra a rede de referência STRING.}
 \label{fig:fluxo}
 \end{figure}
@@ -343,8 +342,7 @@ GO/KEGG; classificador logístico com seleção de atributos aninhada e teste de
 permutação de rótulos). Essa etapa reteve \num{15470} genes após filtragem,
 praticamente idêntico ao pipeline original.
 
-\paragraph{Discretização e modelagem booleana.} Para aplicar os métodos de
-Biologia de Sistemas, definiu-se um painel de 30 genes composto pelo módulo das
+\paragraph{Discretização e modelagem booleana.} Para aplicar os métodos, definiu-se um painel de 30 genes composto pelo módulo das
 ataxias de reparo de DNA (\gene{APTX}, \gene{TDP1}, \gene{XRCC1}, \gene{XRCC4},
 \gene{LIG3}, \gene{LIG4}, \gene{PNKP}, \gene{SETX}, \gene{PARP1}, \gene{ATM}) e
 por um conjunto de genes da imunidade inata/interferon (\gene{IFI44L},
@@ -352,8 +350,7 @@ por um conjunto de genes da imunidade inata/interferon (\gene{IFI44L},
 \gene{IFIT1}/\gene{IFIT3}, \gene{STAT1}/\gene{STAT2}, \gene{IRF7},
 \gene{DDX58}/RIG-I, entre outros). Os perfis de \emph{log}-CPM foram
 padronizados por gene (transformação \emph{z-score}) e, em seguida,
-\emph{quantizados} em duas representações discretas, conforme apresentado na
-disciplina: (i) \emph{quantização binária}, atribuindo \(1\) (superexpresso)
+\emph{quantizados} em duas representações discretas: (i) \emph{quantização binária}, atribuindo \(1\) (superexpresso)
 quando \(z>0\) e \(0\) (subexpresso) caso contrário; e (ii) \emph{quantização
 ternária}, atribuindo \(+1\), \(0\) ou \(-1\) segundo bandas de
 \(\pm 0{,}5\) desvio-padrão. A partir da representação binária, definiu-se, por
@@ -371,9 +368,9 @@ escore de associação. As redes inferidas foram validadas contra uma rede de
 referência (\emph{gold standard}) construída a partir da base STRING v12.0
 (interações com \emph{score} \(\geq 0{,}4\) entre os genes do painel; 212
 arestas de referência dentre 435 pares possíveis). O desempenho foi avaliado com
-a matriz de confusão e as métricas correspondentes --- precisão, \emph{recall}
+a matriz de confusão e as métricas correspondentes - precisão, \emph{recall}
 (sensibilidade), \emph{F1}, área sob a curva ROC (AUC) e área sob a curva
-precisão-\emph{recall} (AUPR) ---, comparando os dois métodos entre si e contra
+precisão-\emph{recall} (AUPR) - , comparando os dois métodos entre si e contra
 um classificador aleatório (AUPR igual à prevalência de arestas). Para as
 métricas pontuais, adotou-se como limiar a seleção das \(k\) arestas de maior
 escore, com \(k\) igual ao número de arestas de referência.
@@ -389,7 +386,7 @@ Foram identificados \num{1221} DEGs entre as condições APTX-KO e WT
 \gene{USP18}, \gene{BST2} e \gene{DDX58} (RIG-I) (Tabela~\ref{tab:topdeg}).
 Muitos desses genes estão descritos na literatura como participantes de
 respostas mediadas por interferon e mecanismos de defesa antiviral, sugerindo
-uma modulação de processos relacionados à imunidade inata --- hipótese
+uma modulação de processos relacionados à imunidade inata, hipótese
 posteriormente explorada pelas análises de enriquecimento funcional.
 
 \begin{table}[htbp]
@@ -511,8 +508,8 @@ genes estimulados por interferon (ISGs) por amostra (Fig~\ref{fig:reanalise}b).
 O programa está fortemente reprimido no KO \emph{especificamente no basal}
 (NS: WT \(-0{,}26\) vs KO \(-1{,}36\); \(p = 5{,}5\times10^{-7}\)), enquanto sob
 estímulo os grupos quase convergem (IS: WT \(+0{,}89\) vs KO \(+0{,}74\);
-\(p = 5{,}1\times10^{-3}\)). Esse padrão --- redução do tônus basal de
-sinalização de interferon --- é exatamente o esperado se as vias cGAS-STING e
+\(p = 5{,}1\times10^{-3}\)). Esse padrão, redução do tônus basal de
+sinalização de interferon, é exatamente o esperado se as vias cGAS-STING e
 RIG-I-MAVS estiverem menos ativas na ausência de \gene{APTX}, e explica por que
 o teste marginal de genótipo é comparativamente fraco: o efeito é dirigido pela
 interação (basal), não uniforme entre estímulos.
@@ -523,7 +520,7 @@ Ambos os modelos (DEGs com seleção aninhada; \emph{eigengenes} do WGCNA)
 alcançaram desempenho máximo (AUC \(=1{,}00\); 12/12 amostras corretamente
 classificadas). Para avaliar se esse resultado é significativo dado o tamanho
 amostral, realizou-se um teste de permutação de rótulos (\num{1000} permutações,
-com todo o pipeline --- incluindo a seleção aninhada --- refeito em cada
+com todo o pipeline (incluindo a seleção aninhada) refeito em cada
 permutação; Fig~\ref{fig:reanalise}c). A distribuição nula centrou-se em
 AUC \(=0{,}34\) (95\({}^{\text{o}}\) percentil \(=0{,}78\)), com \(p\) empírico
 \(= 0{,}009\). Assim, AUC \(=1{,}00\) é estatisticamente significativo e não um
@@ -548,8 +545,8 @@ Distribuição nula do AUC de LOO-CV sob permutação de rótulos; o valor obser
 \subsection*{Discretização e estados booleanos}
 
 A quantização ternária dos 30 genes do painel evidenciou um padrão dominado pelo
-estímulo imune no bloco de genes de interferon --- coerente com os resultados de
-expressão diferencial --- e alterações mais discretas no bloco de reparo de DNA
+estímulo imune no bloco de genes de interferon, coerente com os resultados de
+expressão diferencial, e alterações mais discretas no bloco de reparo de DNA
 (Fig~\ref{fig:disc}a). A partir da representação binária, os estados booleanos
 de consenso dos genótipos WT e KO diferem em uma \emph{distância de Hamming} de
 \num{10}/\num{30} genes (Fig~\ref{fig:disc}b): alternam de estado \gene{TDP1},
@@ -575,8 +572,8 @@ réplicas); genes destacados alternam de estado entre WT e KO
 
 \subsection*{Inferência de rede regulatória: correlação vs.\ informação mútua}
 
-Como método central da disciplina, a rede de co-regulação do painel foi inferida
-por dois critérios --- correlação de Pearson e informação mútua --- e validada
+A rede de co-regulação do painel foi inferida
+por dois critérios, correlação de Pearson e informação mútua, e validada
 contra a rede de referência STRING (Fig~\ref{fig:grn}; Tabela~\ref{tab:grn}).
 A correlação apresentou desempenho superior em todas as métricas
 (AUC \(=0{,}70\); AUPR \(=0{,}71\); F1 \(=0{,}63\)) em comparação à informação
@@ -621,11 +618,14 @@ informação mútua em todas as métricas neste regime de poucas amostras
 
 \subsection*{Medicina de Redes (STRINGdb)}
 
-\gene{ATM} e \gene{PARP1} apresentaram os maiores valores de grau e
-intermediação, destacando-se como os nós mais conectados do módulo
-(Tabela~\ref{tab:string}). O \gene{APTX}, embora com grau relativamente menor,
+A rede de interações dos dez genes-semente (Figura~\ref{fig:netmed}) mostrou-se
+significativamente mais conectada que o esperado ao acaso (\num{41} interações
+observadas \emph{vs.}\ \num{2} esperadas; \(p < 10^{-16}\)), confirmando que
+formam um módulo funcional coeso de reparo de DNA. \gene{ATM} e \gene{PARP1}
+apresentaram os maiores valores de grau e intermediação, destacando-se como os
+nós mais conectados do módulo (Tabela~\ref{tab:string}). O \gene{APTX}, embora com grau relativamente menor,
 exibiu elevada centralidade de intermediação (\(\sim\!\num{12430}\)), sugerindo
-função de conexão entre subconjuntos da rede --- padrão compatível com seu papel
+função de conexão entre subconjuntos da rede, padrão compatível com seu papel
 no reparo de quebras de fita simples (SSBR). Embora nenhum gene-semente tenha
 ultrapassado \(|\logfc{}| > 1\), cinco genes (\gene{APTX}, \gene{TDP1},
 \gene{XRCC1}, \gene{XRCC4} e \gene{LIG3}) apresentaram significância estatística
@@ -655,6 +655,20 @@ reparo.
 \end{tabular}
 \end{table}
 
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.6\textwidth]{results/figures/netmed_seed_module_trim.png}
+\caption{{\bf Módulo de reparo de DNA dos genes-semente na rede STRING.}
+Rede de interações proteína--proteína (STRINGdb, \emph{Homo sapiens}, versão
+12.0) dos dez genes-semente das ataxias de reparo. O conjunto exibe
+enriquecimento significativo de interações (\num{41} observadas \emph{vs.}\
+\num{2} esperadas ao acaso; \(p < 10^{-16}\)), evidenciando um módulo funcional
+coeso. O \gene{APTX} integra-se ao módulo com elevada centralidade de
+intermediação (Tabela~\ref{tab:string}), compatível com seu papel de conexão no
+reparo de quebras de fita simples.}
+\label{fig:netmed}
+\end{figure}
+
 % ======================================================================
 \section*{Discussão}
 
@@ -665,7 +679,7 @@ apresentaram alterações transcricionais discretas, compatível com a função
 predominantemente enzimática atribuída à aprataxina.
 
 Um achado que merece destaque é que o mRNA de \gene{APTX} \emph{não está reduzido}
-no \emph{knockout} --- a reanálise confirmou \logfc{} \(=+0{,}21\)
+no \emph{knockout}, a reanálise confirmou \logfc{} \(=+0{,}21\)
 (\(p_{\mathrm{adj}}\) significativo), reproduzindo o \(+0{,}27\) original. Isso
 indica que o modelo é um \emph{knockout funcional} (lesão gerando transcrito
 estável, porém proteína não-funcional), e não um \emph{knockout} de expressão.
@@ -680,7 +694,7 @@ sinalização por interferon tipo I e II, NF-\(\kappa\)B e receptores NOD-like.
 Esses achados são compatíveis com evidências recentes de uma interface funcional
 entre os mecanismos de reparo de DNA mediados por \gene{APTX} e as vias da
 imunidade inata (eixos cGAS-STING e RIG-I-MAVS)~\cite{Madsen2023}. Importante:
-a direção observada --- ISGs reprimidos no KO --- é concordante com o estudo de
+a direção observada é concordante com o estudo de
 origem, o que confere à presente reanálise o caráter de \emph{validação
 independente}.
 
@@ -689,8 +703,8 @@ elevada centralidade de intermediação, sugerindo potencial participação na
 conexão entre componentes do módulo das ataxias de reparo de DNA, enquanto
 \gene{ATM} e \gene{PARP1} destacaram-se como os nós mais centrais.
 
-A aplicação dos métodos de Biologia de Sistemas --- discretização, modelagem
-booleana e inferência de rede regulatória --- agregou uma perspectiva
+A aplicação dos métodos de discretização, modelagem
+booleana e inferência de rede regulatória, agregou uma perspectiva
 complementar às análises contínuas. A representação booleana de consenso resumiu
 as alterações de estado entre WT e KO (distância de Hamming \(=10/30\)),
 localizando-as simultaneamente nos blocos de reparo de DNA e de interferon. Na
@@ -735,8 +749,7 @@ discretas. Entre os parceiros funcionais de \gene{APTX}, \gene{XRCC1},
 \gene{XRCC4}, \gene{LIG3} e \gene{TDP1} apresentaram mudanças estatisticamente
 significativas, embora de baixa magnitude. As análises de redes indicaram
 elevada centralidade de intermediação para o \gene{APTX} dentro do módulo das
-ataxias de reparo de DNA. Em conjunto --- e reforçados por uma reanálise
-independente que reproduziu os resultados centrais ---, os achados são
+ataxias de reparo de DNA. Em conjunto, os achados são
 consistentes com a hipótese de uma interface funcional entre mecanismos de reparo
 de DNA e processos da imunidade inata no contexto da AOA1, fornecendo subsídios
 para estudos funcionais futuros.
@@ -745,8 +758,8 @@ para estudos funcionais futuros.
 independente, a partir das contagens brutas, os resultados centrais do estudo
 original; (ii) explicitou que o ``efeito do genótipo'' depende do contraste sob o
 modelo com interação e que o \emph{knockout} é funcional, não de expressão; e
-(iii) aplicou métodos de Biologia de Sistemas --- discretização, modelagem
-booleana e inferência de rede regulatória --- comparando dois critérios de
+(iii) aplicou métodos de discretização, modelagem
+booleana e inferência de rede regulatória, comparando dois critérios de
 relevância contra uma rede de referência.
 
 \paragraph{Dificuldades encontradas.} As principais dificuldades foram: o pequeno
@@ -763,7 +776,7 @@ teste de permutação para demonstrar significância apesar de \(n\) pequeno.
 
 \paragraph{Síntese e justificativa.} Em síntese, a correlação superou a
 informação mútua na inferência da rede (AUC \(0{,}70\) vs \(0{,}59\)), o que se
-justifica pela maior robustez de estimadores lineares sob amostragem limitada ---
+justifica pela maior robustez de estimadores lineares sob amostragem limitada -
 uma propriedade metodológica diretamente ligada ao desempenho observado. O
 conjunto de análises converge para uma reprogramação a jusante do programa imune
 inato como assinatura transcricional dominante da perda de \gene{APTX}.
@@ -780,34 +793,21 @@ estão disponíveis no repositório:
 \end{center}
 
 \section*{Declaração de uso de Inteligência Artificial}
-\textbf{Ferramenta utilizada.} Assistente de IA generativa (modelo de linguagem
-de grande porte com acesso a ambiente computacional).
+\textbf{Ferramenta utilizada.} Assistente de IA generativa.\newline
 
 \textbf{Como e onde foi utilizada.} A ferramenta foi empregada como apoio em
-quatro etapas: (i) \emph{revisão crítica} do manuscrito original e da metodologia;
-(ii) \emph{reanálise} dos dados públicos (expressão diferencial com DESeq2,
-enriquecimento funcional, discretização, modelagem booleana, inferência de rede
-regulatória e validação por métricas); (iii) \emph{geração das figuras}; e
-(iv) \emph{redação e formatação} em \LaTeX{}. Todos os resultados numéricos foram
+três etapas: (i) \emph{revisão crítica} do manuscrito original;
+(ii) \emph{scripts R e Python} ajuda na criação dos scripts R e Python; e
+(iii) \emph{ajustes na formatação} em \LaTeX{}. Todos os resultados numéricos foram
 computados a partir dos dados reais (GSE245766), verificados por reexecução dos
-\emph{scripts}, e a interpretação científica e as decisões metodológicas são de
-responsabilidade do(a) autor(a).
+\emph{scripts}.\newline
 
 \textbf{Prompts utilizados (síntese).} As principais solicitações feitas à
 ferramenta foram, em ordem cronológica:
 \begin{enumerate}
-\item ``Entender o artigo e fazer uma revisão crítica do manuscrito.''
-\item ``Fazer ambas as recomendações da revisão'' (reanálise: contraste de
-genótipo sob o modelo com interação; teste de permutação do AUC; escore de
-assinatura de interferon).
-\item ``Criar um documento padrão \LaTeX{}, em pt-BR, com um artigo baseado no
-relatório e nos novos resultados.''
-\item ``Adicionar ao artigo gráficos e dados obtidos com os métodos aprendidos na
-disciplina'' (discretização, redes booleanas, inferência de GRN por correlação e
-informação mútua, validação contra STRING com AUC/precisão/\emph{recall}/F1).
-\item ``Verificar, com base na solicitação da professora, se o trabalho está
-adequado'' e ``adaptar o artigo às normas da revista \emph{PLOS Computational
-Biology}.''
+\item ``Revisão crítica do manuscrito original.''
+\item ``Ajuda na criação dos script R e Python'' (correção e ajustes em problemas de compilação).
+\item ``Ajustes na criação do documento padrão \LaTeX{}''
 \end{enumerate}
 
 % ======================================================================

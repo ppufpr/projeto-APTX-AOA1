@@ -10,17 +10,32 @@ contra rede de referência (STRING).
 artigo_APTX_AOA1.tex        Fonte LaTeX do artigo (compila com pdflatex/tectonic)
 artigo_APTX_AOA1.pdf        Artigo final
 reanalise_sistemas.py       Script reproduzível (discretização, booleano, GRN, métricas)
-R/                          Análises em R/Bioconductor (DESeq2, WGCNA, CoDiNA) — ver R/README.md
+R/                          Análises em R/Bioconductor (DESeq2, WGCNA, CoDiNA)
 grn_metrics.json            Métricas de validação (correlação vs informação mútua)
 figure_reanalysis.png       Fig. 1: DEGs, escore ISG, teste de permutação
 figure_discretizacao.png    Fig. 2: quantização ternária + estado booleano (Hamming)
 figure_grn_inference.png    Fig. 3: ROC/PR + métricas (inferência vs STRING)
 ```
-O diretório `R/` reúne o código em R que fez parte do desenvolvimento do artigo:
-as etapas de expressão diferencial (**DESeq2**), co-expressão (**WGCNA**) e
-co-expressão diferencial (**CoDiNA**) descritas nos Resultados. As demais etapas
-(discretização, estado booleano, inferência de rede e validação STRING) estão em
-`reanalise_sistemas.py`.
+### Diretório `R/`
+Pipeline em R/Bioconductor que gerou as análises principais do artigo (delineamento
+fatorial 2×2, n=12). Rodar `source("R/00_setup.R")` uma vez e depois
+`source("R/run_all.R")`:
+```
+config.R                 Parâmetros centrais (GSE245766, org. humano, táxon STRING)
+00_setup.R               Instala/carrega dependências (CRAN + Bioconductor)
+01_download.R            Baixa dados e metadados do GEO (GEOquery)
+02_preprocess.R          Metadados 2×2, filtro e normalização (edgeR/DESeq2, vst)
+03_diff_expression.R     Expressão diferencial fatorial (DESeq2): KO, estímulo, interação
+04_wgcna.R               Rede de co-expressão e módulos (WGCNA)
+05_diff_coexpression.R   Co-expressão diferencial APTX-KO vs WT (CoDiNA)
+06_enrichment.R          Enriquecimento funcional GO/KEGG (clusterProfiler)
+07_classification.R      Classificador KO×WT com validação LOO (DEGs vs eigengenes)
+08_network_medicine.R    Módulo de reparo de DNA via STRINGdb + centralidade (igraph)
+09_report.R              Relatório .docx com figuras e tabelas (officer/flextable)
+run_all.R                Executa os passos 01–09 na ordem
+```
+As demais etapas (discretização, estado booleano, inferência de rede correlação vs.
+informação mútua e validação STRING) estão no script Python `reanalise_sistemas.py`.
 
 ## Reprodução
 ```bash
@@ -44,8 +59,7 @@ Requer acesso a `string-db.org` para a rede de referência.
 
 ## Compilar o artigo
 ```bash
-pdflatex artigo_APTX_AOA1.tex   # 2x para referências cruzadas
-# ou: tectonic artigo_APTX_AOA1.tex
+pdflatex artigo_APTX_AOA1.tex
 ```
 
 ## Informação mútua
