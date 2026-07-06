@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Reanalise APTX/AOA1 -- metodos de Biologia de Sistemas
+Reanalise APTX/AOA1 -- metodos de Biologia de Sistemas vistos em aula
 Dados publicos: GEO GSE245766 (HMC3 microglia, APTX-KO vs WT x estimulo imune)
 
 Reproduz:
@@ -94,4 +94,4 @@ for name, sc in [("Correlacao(|r|)", score_corr), ("Info.Mutua", score_mi)]:
     p, r, f1 = pt(sc)
     print(f"[{name:16s}] AUC={roc_auc_score(y,sc):.3f} "
           f"AUPR={average_precision_score(y,sc):.3f} P={p:.3f} R={r:.3f} F1={f1:.3f}")
-print(f"[Aleatorio]        AUPR(prevalencia)={y.mean():.3f}  pares={len(y)}")
+print(f"[Aleatorio] AUPR(prevalencia)={y.mean():.3f}  pares={len(y)}")
