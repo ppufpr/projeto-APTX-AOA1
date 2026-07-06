@@ -42,7 +42,11 @@ informação mútua e validação STRING) estão no script Python `reanalise_sis
 # dados (uma vez):
 wget https://ftp.ncbi.nlm.nih.gov/geo/series/GSE245nnn/GSE245766/suppl/GSE245766_counts_table_raw.csv.gz
 
-pip install numpy pandas scipy scikit-learn matplotlib
+## Ambiente
+
+Crie um ambiente venv
+
+pip install numpy pandas scipy scikit-learn matplotlib ou, se preferir, pip install -r requirements.txt
 python reanalise_sistemas.py GSE245766_counts_table_raw.csv.gz
 ```
 Requer acesso a `string-db.org` para a rede de referência.
