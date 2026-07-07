@@ -71,6 +71,9 @@ Informação mútua é uma medida estatística que indica quanto conhecer uma va
 
 Interferons (IFNs) são proteínas de sinalização (citocinas) que as células liberam quando detectam uma ameaça
 
+## Diretório "illustrations"
+Algumas imagens criadas durante a compreensão dos conhecimentos vistos nas bibliográfias encontradas durante a revisão da literatura de conceitos biológicos.
+
 ## Fonte dos dados
 Madsen HB, et al. *The DNA repair enzyme, Aprataxin, plays a role in innate
 immune signaling.* Front Aging Neurosci. 2023;15:1290681.
