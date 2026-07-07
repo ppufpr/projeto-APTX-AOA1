@@ -44,7 +44,7 @@ wget https://ftp.ncbi.nlm.nih.gov/geo/series/GSE245nnn/GSE245766/suppl/GSE245766
 
 ## Ambiente
 
-Crie um ambiente venv
+Crie um ambiente virtual (venv)
 
 pip install numpy pandas scipy scikit-learn matplotlib ou, se preferir, pip install -r requirements.txt
 python reanalise_sistemas.py GSE245766_counts_table_raw.csv.gz
