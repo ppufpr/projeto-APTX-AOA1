@@ -66,8 +66,10 @@ Requer acesso a `string-db.org` para a rede de referência.
 pdflatex artigo_APTX_AOA1.tex
 ```
 
-## Informação mútua
+## Sempre aprendendo
 Informação mútua é uma medida estatística que indica quanto conhecer uma variável ajuda a reduzir a incerteza sobre outra variável.
+
+Interferons (IFNs) são proteínas de sinalização (citocinas) que as células liberam quando detectam uma ameaça
 
 ## Fonte dos dados
 Madsen HB, et al. *The DNA repair enzyme, Aprataxin, plays a role in innate

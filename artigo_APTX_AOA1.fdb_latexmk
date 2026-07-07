@@ -1,7 +1,7 @@
 # Fdb version 4
-["pdflatex"] 1783347186.91125 "/home/phrp/doutorado/projeto_APTX_AOA1/artigo_APTX_AOA1.tex" "artigo_APTX_AOA1.pdf" "artigo_APTX_AOA1" 1783347188.48009 0
+["pdflatex"] 1783426735.06947 "/home/phrp/doutorado/projeto_APTX_AOA1/artigo_APTX_AOA1.tex" "artigo_APTX_AOA1.pdf" "artigo_APTX_AOA1" 1783426736.62968 0
   "/etc/texmf/web2c/texmf.cnf" 1774441896.13927 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/phrp/doutorado/projeto_APTX_AOA1/artigo_APTX_AOA1.tex" 1783347185.16965 43679 4bfb2ac0770cdd75344a9243af2131ad ""
+  "/home/phrp/doutorado/projeto_APTX_AOA1/artigo_APTX_AOA1.tex" 1783426734.88694 43789 a73525b7b32ffd98a09575c4ebe776ff ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/ecbx0500.tfm" 1136768653 3584 0913860e6fa2bdf78ecaf460b391112b ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/ecbx0700.tfm" 1136768653 3584 ca0c423beaacd28d53ddce5a826cd558 ""
@@ -133,9 +133,9 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1707919699 40399 f2c302f7d2af602abb742093540a5834 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1774442749.31566 5472669 54eaf61a88b6b7896ebd0dac973cb29c ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1774442863 8213345 983456b1bd1f5d739d93d5735aa0d7cb ""
-  "artigo_APTX_AOA1.aux" 1783347188.39952 9624 a4c1c5cd4a1096aad674c2f86a665562 "pdflatex"
-  "artigo_APTX_AOA1.out" 1783347187.45994 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "artigo_APTX_AOA1.tex" 1783347185.16965 43679 4bfb2ac0770cdd75344a9243af2131ad ""
+  "artigo_APTX_AOA1.aux" 1783426736.54675 9624 d56a30d730066219e96d0cde596ea8fc "pdflatex"
+  "artigo_APTX_AOA1.out" 1783426735.60841 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "artigo_APTX_AOA1.tex" 1783426734.88694 43789 a73525b7b32ffd98a09575c4ebe776ff ""
   "figure_discretizacao.png" 1783337870 129791 533f35975c86e8e102b1b7226745b487 ""
   "figure_fluxograma.png" 1783337870 159343 1b18f35f51e698d0efe6fc7063b241bc ""
   "figure_grn_inference.png" 1783337870 160980 71c687b437fa60653378120861c14169 ""

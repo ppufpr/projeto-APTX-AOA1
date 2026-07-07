@@ -360,7 +360,7 @@ pela \emph{distância de Hamming}, número de genes que alternam entre os estado
 ON/OFF.
 
 \paragraph{Inferência de rede regulatória e validação.} A rede de co-regulação
-do painel foi inferida por dois critérios de relevância ensinados na disciplina:
+do painel foi inferida por dois critérios de relevância:
 \emph{correlação de Pearson} (dependência linear par-a-par, \(|r|\)) e
 \emph{informação mútua} (dependência estatística geral, estimador de vizinhos
 mais próximos do \textsf{scikit-learn}). Cada par de genes recebeu, assim, um
@@ -440,7 +440,7 @@ NS (\num{1294} DEGs, reproduzindo o número original), KO-vs-WT em IS
 DEGs). A sobreposição entre as listas em NS e IS é de apenas
 \(\text{Jaccard} = 0{,}50\) (822 DEGs em comum; 472 exclusivos de NS; 339
 exclusivos de IS), indicando que quase metade dos DEGs de genótipo muda conforme
-o contraste. Recomenda-se, portanto, descrever o contraste principal como
+o contraste. Portanto, descreve-se o contraste principal como
 ``KO vs WT em células não estimuladas''.
 
 \subsection*{Co-expressão (WGCNA e CoDiNA)}
@@ -683,7 +683,7 @@ no \emph{knockout}, a reanálise confirmou \logfc{} \(=+0{,}21\)
 (\(p_{\mathrm{adj}}\) significativo), reproduzindo o \(+0{,}27\) original. Isso
 indica que o modelo é um \emph{knockout funcional} (lesão gerando transcrito
 estável, porém proteína não-funcional), e não um \emph{knockout} de expressão.
-Recomenda-se, portanto, descrever o achado como ``perda de função de \gene{APTX}''.
+Portanto, o achado fica descrito como ``perda de função de \gene{APTX}''.
 
 Em contraste, foram observadas alterações expressivas em genes e vias associadas
 à resposta antiviral e à sinalização por interferon, incluindo \gene{DDX58}
@@ -715,8 +715,7 @@ metodológica central: critérios de relevância mais gerais, como a informaçã
 mútua, capturam dependências não lineares e relações multivariadas, mas exigem
 maior número de amostras para uma estimativa estável; sob \(M \ll N\), a
 correlação linear, apesar de suas limitações, tende a produzir inferências mais
-robustas. Trata-se de uma limitação inerente ao tamanho amostral (\(n=12\)), e
-não do arcabouço de informação mútua em si.
+robustas. Trata-se de uma limitação devido ao tamanho da amostra (\(n=12\)), e não ao modelo de informação mútua em si.
 
 \subsection*{Limitações}
 
@@ -776,8 +775,7 @@ teste de permutação para demonstrar significância apesar de \(n\) pequeno.
 
 \paragraph{Síntese e justificativa.} Em síntese, a correlação superou a
 informação mútua na inferência da rede (AUC \(0{,}70\) vs \(0{,}59\)), o que se
-justifica pela maior robustez de estimadores lineares sob amostragem limitada -
-uma propriedade metodológica diretamente ligada ao desempenho observado. O
+justifica pela maior robustez de estimadores lineares sob amostragem limitada, uma propriedade metodológica diretamente ligada ao desempenho observado. O
 conjunto de análises converge para uma reprogramação a jusante do programa imune
 inato como assinatura transcricional dominante da perda de \gene{APTX}.
 
@@ -796,18 +794,19 @@ estão disponíveis no repositório:
 \textbf{Ferramenta utilizada.} Assistente de IA generativa.\newline
 
 \textbf{Como e onde foi utilizada.} A ferramenta foi empregada como apoio em
-três etapas: (i) \emph{revisão crítica} do manuscrito original;
-(ii) \emph{scripts R e Python} ajuda na criação dos scripts R e Python; e
-(iii) \emph{ajustes na formatação} em \LaTeX{}. Todos os resultados numéricos foram
+três etapas: (i) \emph{revisão crítica e compreensão} das referências bibliográficas e dos conceitos biológicos;
+(ii) \emph{em scripts R e Python} na escrita e correção de bugs dos scripts; e
+(iii) \emph{ajustes na formatação} em \LaTeX{}.\newline \newline
+Todos os resultados numéricos foram
 computados a partir dos dados reais (GSE245766), verificados por reexecução dos
 \emph{scripts}.\newline
 
 \textbf{Prompts utilizados (síntese).} As principais solicitações feitas à
 ferramenta foram, em ordem cronológica:
 \begin{enumerate}
-\item ``Revisão crítica do manuscrito original.''
-\item ``Ajuda na criação dos script R e Python'' (correção e ajustes em problemas de compilação).
-\item ``Ajustes na criação do documento padrão \LaTeX{}''
+\item ``Preciso de ajuda no entendimento de biologia do papers.''
+\item ``Análise os bugs e realize a sugestão de correção do script...'' (correção e ajustes em problemas de compilação).
+\item ``Ajude na correção da formatação do documento padrão \LaTeX{} com base no template fornecido.''
 \end{enumerate}
 
 % ======================================================================
