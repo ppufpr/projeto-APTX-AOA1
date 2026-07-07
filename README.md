@@ -1,4 +1,4 @@
-# Redes gênicas e a perda de APTX (AOA1) — projeto final de Bioinformática
+# Redes gênicas e a perda de APTX (AOA1), artigo escrito como trabalho final da disciplina de Bioinformática
 
 Reanálise dos dados públicos **GEO GSE245766** (microglia humana HMC3;
 APTX-KO vs WT x estímulo imune) aplicando métodos de bioinformática:
